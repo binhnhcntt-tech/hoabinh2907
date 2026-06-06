@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('current-year');
+    if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Navigation logic (Single Page Application feel)
+    // Navigation logic (Sidebar Tabs)
     const navButtons = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.section');
 
@@ -21,9 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (targetSection) {
                 targetSection.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 
                 // Re-trigger animations for elements inside the section
-                const animatedElements = targetSection.querySelectorAll('.fade-in, .fade-in-up, .fade-in-right');
+                const animatedElements = targetSection.querySelectorAll('.fade-in, .fade-in-up, .smart-card');
                 animatedElements.forEach(el => {
                     el.style.animation = 'none';
                     el.offsetHeight; /* trigger reflow */
