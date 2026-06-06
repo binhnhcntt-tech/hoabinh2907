@@ -3,260 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Cá Nhân</title>
-    <meta name="description" content="Portfolio cá nhân lưu trữ các bài tập và chia sẻ quá trình học tập.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Portfolio Cá Nhân - Nguyễn Hòa Bình</title>
+    <meta name="description" content="Portfolio báo cáo kỹ năng số">
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="background-effects">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-    
-    <header class="glass-nav">
-        <div class="logo">My<span>Portfolio</span></div>
+    <!-- Header -->
+    <header>
+        <div class="logo">Portfolio<span>.</span></div>
         <nav>
-            <button class="nav-btn active" data-target="about">Giới thiệu</button>
-            <button class="nav-btn" data-target="projects">Dự án</button>
-            <button class="nav-btn" data-target="summary">Tổng kết</button>
+            <button class="nav-btn active" onclick="showSection('about')">Giới thiệu</button>
+            <button class="nav-btn" onclick="showSection('projects')">Dự án</button>
+            <button class="nav-btn" onclick="showSection('summary')">Tổng kết</button>
         </nav>
     </header>
 
     <main>
-        <!-- Section Giới thiệu -->
+        <!-- ABOUT SECTION -->
         <section id="about" class="section active">
-            <div class="about-container">
-                <div class="about-content fade-in">
-                    <h1 class="greeting">Xin chào, mình là <span class="highlight">Nguyễn Hòa Bình</span> 👋</h1>
-                    <h2 class="subtitle">Sinh viên khóa K70 ngành <span class="highlight-text">Công nghệ Vật liệu - UET</span> (MSV: 25023947)</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
-                        Với lòng nhiệt huyết và định hướng nghề nghiệp rõ ràng, tôi đang nỗ lực học hỏi để làm chủ các kỹ nghệ phần mềm và các giải pháp trí tuệ nhân tạo hiện đại. Báo cáo này là nơi lưu trữ và phản ánh các kết quả thực nghiệm cũng như bài học kinh nghiệm sâu sắc mà tôi gặt hái được trong môn Kỹ năng số.
-                    </p>
-                    
-                    <div class="info-cards">
-                        <div class="card glass-card">
-                            <i class="fa-solid fa-flag icon"></i>
-                            <h3>Mục tiêu Ngắn hạn</h3>
-                            <p>Duy trì điểm số xuất sắc. Nắm vững cấu trúc dữ liệu, giải thuật, lập trình hướng đối tượng (OOP) và cơ sở dữ liệu.</p>
-                        </div>
-                        <div class="card glass-card">
-                            <i class="fa-solid fa-briefcase icon"></i>
-                            <h3>Mục tiêu Trung hạn</h3>
-                            <p>Thực tập tại các tập đoàn công nghệ lớn. Học hỏi sâu về kiến trúc Web hiện đại và tích hợp AI tạo sinh vào sản phẩm thực tế.</p>
-                        </div>
-                        <div class="card glass-card">
-                            <i class="fa-solid fa-rocket icon"></i>
-                            <h3>Mục tiêu Dài hạn</h3>
-                            <p>Trở thành Senior Software Architect hoặc AI Engineer. Thiết kế hệ thống phần mềm lớn, đóng góp giá trị thực tế cho cộng đồng.</p>
-                        </div>
+            <div class="section-header fade-in">
+                <h1 class="project-title" style="text-align: center; font-size: 3rem; margin-bottom: 1rem;">Nguyễn Hòa Bình</h1>
+                <p style="text-align: center; font-family: 'Inter', sans-serif; color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem auto;">
+                    Sinh viên khóa K70 ngành Công nghệ Thông tin tại Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội (UET-VNU). Mã số sinh viên: 25023947.
+                </p>
+            </div>
+            <div class="academic-project fade-in-up">
+                <h3 class="section-heading">Giới thiệu Bản thân & Mục tiêu</h3>
+                <p>Tôi hiện là sinh viên khóa K70 ngành Công nghệ vật liệu tại Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội (UET-VNU). Với lòng nhiệt huyết và định hướng nghề nghiệp rõ ràng, tôi đang nỗ lực học hỏi để làm chủ các kỹ nghệ phần mềm và các giải pháp trí tuệ nhân tạo hiện đại.</p>
+                <p>Môn học Kỹ năng số là cơ sở giúp tôi chuẩn hóa toàn bộ tư duy thao tác, thu thập dữ liệu và làm việc nhóm trong môi trường số hóa. Báo cáo này đóng vai trò tập hợp, lưu trữ và phản ánh các kết quả thực nghiệm cũng như bài học kinh nghiệm sâu sắc mà tôi đã gặt hái được trong học kỳ vừa qua.</p>
+                
+                <h3 class="section-heading" style="margin-top: 3rem;">Mục Tiêu Phát Triển Cá Nhân</h3>
+                <div class="info-cards">
+                    <div class="card glass-card">
+                        <i class="fa-solid fa-flag icon"></i>
+                        <h4>Ngắn hạn: Học tập nền tảng</h4>
+                        <p>Duy trì điểm số học tập xuất sắc (GPA cao) tại UET. Nắm vững cấu trúc dữ liệu, giải thuật, lập trình hướng đối tượng (OOP) và cơ sở dữ liệu. Hoàn thành xuất sắc các đồ án môn học cơ sở.</p>
                     </div>
-                </div>
-                <div class="about-image fade-in-right">
-                    <div class="image-wrapper glass-card">
-                        <img src="avatar.png" alt="Avatar" id="avatar-img">
+                    <div class="card glass-card">
+                        <i class="fa-solid fa-briefcase icon"></i>
+                        <h4>Trung hạn: Tích lũy thực tế</h4>
+                        <p>Tìm kiếm cơ hội thực tập tại các tập đoàn công nghệ lớn. Học hỏi sâu về kiến trúc Web hiện đại và tích hợp mô hình AI tạo sinh vào sản phẩm thực tế. Tham gia nghiên cứu khoa học cùng các thầy cô tại UET.</p>
+                    </div>
+                    <div class="card glass-card">
+                        <i class="fa-solid fa-rocket icon"></i>
+                        <h4>Dài hạn: Chuyên gia công nghệ</h4>
+                        <p>Trở thành một Senior Software Architect hoặc AI Engineer chuyên nghiệp. Thiết kế và triển khai các hệ thống phần mềm lớn, hiệu quả, đóng góp giá trị thực tế cho cộng đồng công nghệ tại Việt Nam.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Dự án -->
+        <!-- PROJECTS SECTION -->
         <section id="projects" class="section">
             <div class="section-header fade-in">
-                <h2>Danh Mục 6 Bài Thực Hành & Dự Án</h2>
-                <p>Chi tiết các bài tập, thực nghiệm và kết quả đạt được trong học kỳ 2025-2026.</p>
+                <h2 class="project-title" style="text-align: center;">Danh mục 6 Bài thực hành & Dự án</h2>
+                <p style="text-align: center; color: var(--text-secondary);">Chi tiết các bài tập, thực nghiệm và kết quả đạt được trong học kỳ 2025-2026.</p>
             </div>
-            
-            <div class="projects-list">
-                <!-- Project 1 -->
-                <div class="project-card-wide glass-card fade-in-up">
-                    <div class="project-info">
-                        <span class="badge">Bài tập 1 (Mục 1.4)</span>
-                        <h3>Bài 1: Máy tính và các thiết bị ngoại vi — Thao tác cơ bản với tệp tin và thư mục</h3>
-                        <p><strong>Mục tiêu:</strong> Làm chủ các kỹ năng quản trị tệp tin cơ bản trong hệ điều hành Windows để tổ chức không gian dữ liệu khoa học.</p>
-                        <p><strong>Quá trình thực hiện:</strong></p>
-                        <ul>
-                            <li>Sử dụng tổ hợp phím <code>Windows + E</code> để mở File Explorer.</li>
-                            <li>Tạo thư mục làm việc chính <code>ThucHanh_NguyenBaNhat</code> trên ổ đĩa dữ liệu.</li>
-                            <li>Tạo tệp văn bản <code>GhiChu.txt</code>, sau đó đổi tên thành <code>GhiChuQuanTrong.txt</code>.</li>
-                            <li>Tạo thư mục con <code>TaiLieu</code>; sao chép (Copy-Paste) tệp ghi chú vào thư mục này.</li>
-                            <li>Tạo tệp <code>DiChuyen.txt</code> và di chuyển (Cut-Paste) vào thư mục con <code>TaiLieu</code>.</li>
-                            <li>Thực hành xóa tệp vào Recycle Bin, xóa vĩnh viễn (Shift + Delete), và khôi phục tệp.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;"><a href="reports/Bai1.pdf" class="btn-primary" style="padding: 0.5rem 1rem; width: auto;"><i class="fa-solid fa-file-pdf"></i> Xem báo cáo PDF</a></p>
-                    </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="project-card-wide glass-card fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="project-info">
-                        <span class="badge">Bài tập 2 (Mục 2.4)</span>
-                        <h3>Bài 2: Khai thác dữ liệu và thông tin — Tìm kiếm và đánh giá thông tin học thuật</h3>
+            <div class="projects-list">
+                
+                <!-- PROJECT 1 -->
+                <article class="academic-project fade-in-up">
+                    <div class="project-meta">
+                        <span class="project-category">BÀI THỰC HÀNH 1</span>
+                        <span class="project-reference">Mục 1.4</span>
+                    </div>
+                    <h2 class="project-title">Bài 1: Máy tính và các thiết bị ngoại vi — Thao tác cơ bản với tệp tin và thư mục</h2>
+                    <hr class="project-divider">
+                    
+                    <div class="project-section">
+                        <h3 class="section-heading">1. Giới thiệu chung & Mục tiêu</h3>
+                        <p>Thực hành thao tác hệ thống là bước đầu tiên để tổ chức không gian làm việc số khoa học. Bài tập này huấn luyện các kỹ năng quản trị tệp tin cơ bản trong môi trường hệ điều hành Windows, bao gồm điều hướng ổ đĩa, tạo thư mục, di chuyển, đổi tên, sao chép, và quản lý thùng rác nhằm tối ưu hóa tổ chức dữ liệu cá nhân.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-heading">2. Quy trình & Các bước thực hiện</h3>
+                        <ol class="custom-list">
+                            <li><strong>Khởi chạy trình quản lý tệp:</strong> Mở File Explorer bằng tổ hợp phím <code>Windows + E</code> hoặc nhấn trực tiếp vào biểu tượng thư mục màu vàng trên taskbar.</li>
+                            <li><strong>Truy cập không gian làm việc:</strong> Định vị ổ đĩa dữ liệu (ví dụ: ổ D: hoặc E:). Trong trường hợp máy tính chỉ có một phân vùng duy nhất, truy cập thư mục <code>Documents</code>.</li>
+                            <li><strong>Xây dựng cấu trúc thư mục chính:</strong> Tạo thư mục làm việc cá nhân có tên định dạng chuẩn <code>ThucHanh_NguyenBaNhat</code>.</li>
+                            <li><strong>Quản lý tệp tin văn bản:</strong>
+                                <ul>
+                                    <li>Tạo tệp ghi chú mới <code>GhiChu.txt</code> thông qua chuột phải → <code>New</code> → <code>Text Document</code>.</li>
+                                    <li>Thực hiện đổi tên tệp (Rename) thành <code>GhiChuQuanTrong.txt</code>.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Phân chia cấu trúc phân cấp (Hierarchical Structure):</strong> Tạo thư mục con tên là <code>TaiLieu</code> nằm bên trong thư mục cá nhân chính.</li>
+                            <li><strong>Sao chép dữ liệu (Copy & Paste):</strong> Nhân bản tệp <code>GhiChuQuanTrong.txt</code> từ thư mục gốc vào thư mục con <code>TaiLieu</code> bằng tổ hợp phím <code>Ctrl + C</code> và <code>Ctrl + V</code>.</li>
+                            <li><strong>Di chuyển dữ liệu (Cut & Paste):</strong> Tạo tệp <code>DiChuyen.txt</code> ở thư mục gốc, sử dụng phím tắt <code>Ctrl + X</code> và <code>Ctrl + V</code> để chuyển tệp vào thư mục con <code>TaiLieu</code> mà không giữ lại bản gốc.</li>
+                            <li><strong>Xóa tệp tin và Khôi phục:</strong>
+                                <ul>
+                                    <li>Xóa tệp <code>GhiChuQuanTrong.txt</code> tại thư mục <code>TaiLieu</code> gửi vào Recycle Bin.</li>
+                                    <li>Thực hiện xóa vĩnh viễn tệp <code>DiChuyen.txt</code> bằng tổ hợp phím <code>Shift + Delete</code>.</li>
+                                    <li>Mở Recycle Bin trên Desktop, tìm tệp <code>GhiChuQuanTrong.txt</code> và nhấn <code>Restore</code> để khôi phục tệp về thư mục cũ.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-heading">3. Hình ảnh phân tích & Thiết kế hệ thống</h3>
+                        <div class="image-gallery">
+                            <figure class="gallery-item">
+                                <div class="img-placeholder" style="background: #e2e8f0;"><i class="fa-solid fa-folder-tree" style="font-size: 2rem; color: #94a3b8;"></i></div>
+                                <figcaption>Hình 1.1: Phân tích cấu trúc thư mục ThucHanh_NguyenBaNhat trong File Explorer</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <div class="img-placeholder" style="background: #e2e8f0;"><i class="fa-solid fa-file-signature" style="font-size: 2rem; color: #94a3b8;"></i></div>
+                                <figcaption>Hình 1.2: Thiết lập tệp tin văn bản và thực hiện thao tác đổi tên</figcaption>
+                            </figure>
+                            <figure class="gallery-item">
+                                <div class="img-placeholder" style="background: #e2e8f0;"><i class="fa-solid fa-copy" style="font-size: 2rem; color: #94a3b8;"></i></div>
+                                <figcaption>Hình 1.3: Tổ chức thư mục con và thực hiện các thao tác di chuyển dữ liệu</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-heading">4. Bài học kinh nghiệm</h3>
+                        <p>Việc nắm rõ các phím tắt hệ thống (Ctrl + C, Ctrl + X, Ctrl + V, Shift + Del) giúp tăng tốc độ thao tác dữ liệu lên đáng kể. Việc tổ chức thư mục khoa học ngay từ đầu ngăn ngừa thất lạc tài liệu học tập và giúp quản lý dung lượng ổ cứng hiệu quả.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3 class="section-heading">5. Minh chứng học tập</h3>
+                        <p>Báo cáo chi tiết và đầy đủ của Bài tập 1 dưới dạng PDF có thể xem hoặc tải về tại đây: <a href="reports/Bai1.pdf" class="pdf-link"><i class="fa-solid fa-file-pdf"></i> Báo cáo Bài 1 (Bai1.pdf)</a></p>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2 -->
+                <article class="academic-project fade-in-up">
+                    <div class="project-meta">
+                        <span class="project-category">BÀI THỰC HÀNH 2</span>
+                        <span class="project-reference">Mục 2.4</span>
+                    </div>
+                    <h2 class="project-title">Bài 2: Khai thác dữ liệu và thông tin — Tìm kiếm và đánh giá thông tin học thuật</h2>
+                    <hr class="project-divider">
+                    <div class="project-section">
+                        <h3 class="section-heading">1. Chủ đề nghiên cứu & Nguồn dữ liệu</h3>
                         <p><strong>Chủ đề nghiên cứu:</strong> Tác động của Trí tuệ nhân tạo đến thực trạng việc làm và tỷ lệ thất nghiệp trong ngành CNTT.</p>
-                        <p><strong>Nguồn dữ liệu:</strong> Khai thác 12 tài liệu (gồm 7 bài báo KH chất lượng cao) từ 5 nguồn uy tín.</p>
+                        <p><strong>Nguồn dữ liệu:</strong> Khai thác 12 tài liệu (gồm 7 bài báo KH chất lượng cao) từ 5 nguồn: Google Scholar, tạp chí Science, sách chuyên khảo Yale, báo cáo WEF/McKinsey, và Forbes.</p>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">2. Bảng tổng hợp & Đánh giá độ tin cậy tiêu biểu</h3>
                         <div class="table-responsive">
                             <table class="data-table">
                                 <thead>
                                     <tr>
-                                        <th>Tài liệu</th>
-                                        <th>Đánh giá tiêu chí</th>
-                                        <th>Ưu/Nhược điểm</th>
+                                        <th>Tài liệu (Harvard Style)</th>
+                                        <th>Loại nguồn</th>
+                                        <th>Tóm tắt Đánh giá 5 tiêu chí</th>
+                                        <th>Phân tích Ưu/Nhược điểm</th>
                                         <th>Xếp loại</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Noy & Zhang (2023) - Science</td>
-                                        <td>Tạp chí Top 1, Tác giả MIT, Phương pháp RCT, Trích dẫn >800.</td>
-                                        <td>Ưu: Độ tin cậy tuyệt đối. Nhược: Quy mô mẫu trung bình.</td>
+                                        <td>Noy & Zhang (2023)<br><small>Science, 381(6654)</small></td>
+                                        <td>Tạp chí Khoa học</td>
+                                        <td>Đăng trên tạp chí Science (Top 1); Tác giả MIT; Phương pháp RCT; Trích dẫn >800; Năm 2023.</td>
+                                        <td><strong>Ưu:</strong> Độ tin cậy tuyệt đối nhờ bình duyệt.<br><strong>Nhược:</strong> Quy mô mẫu thử nghiệm mức trung bình.</td>
                                         <td><span class="rank-badge excellent">Xuất sắc</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Peng et al. (2023) - arXiv</td>
-                                        <td>Tác giả Microsoft/MIT, RCT đo Copilot, Trích dẫn >500.</td>
-                                        <td>Ưu: Trực diện năng suất. Nhược: Xung đột lợi ích (Microsoft).</td>
+                                        <td>Peng et al. (2023)<br><small>arXiv preprint</small></td>
+                                        <td>Bài báo Hội thảo</td>
+                                        <td>Tác giả từ Microsoft/MIT; Phương pháp RCT đo Copilot; Trích dẫn >500; Cập nhật 2023.</td>
+                                        <td><strong>Ưu:</strong> Nghiên cứu trực diện năng suất lập trình.<br><strong>Nhược:</strong> Có xung đột lợi ích từ phía Microsoft.</td>
                                         <td><span class="rank-badge excellent">Xuất sắc</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Acemoglu & Restrepo (2020)<br><small>J. Political Economy</small></td>
+                                        <td>Tạp chí Khoa học</td>
+                                        <td>Tác giả Nobel Daron Acemoglu; Mô hình toán lượng; Trích dẫn >4000; Năm 2020.</td>
+                                        <td><strong>Ưu:</strong> Khung lý thuyết vững chắc về tự động hóa.<br><strong>Nhược:</strong> Tập trung robot hơn AI phần mềm.</td>
+                                        <td><span class="rank-badge very-high">Rất cao</span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p style="margin-top: 1rem;"><a href="reports/Bai2.pdf" class="btn-primary" style="padding: 0.5rem 1rem; width: auto;"><i class="fa-solid fa-file-pdf"></i> Xem báo cáo PDF</a></p>
                     </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card-wide glass-card fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="project-info">
-                        <span class="badge">Bài tập 3 (Mục 3.4)</span>
-                        <h3>Bài 3: Tổng quan về trí tuệ nhân tạo — Viết Prompt hiệu quả cho các tác vụ học tập</h3>
-                        <p><strong>Mục tiêu:</strong> Tối ưu hóa chất lượng đầu ra của LLM thông qua kỹ thuật Prompt nâng cao.</p>
-                        <p><strong>Kết quả thực nghiệm nổi bật (Tác vụ giải thích Interface trong OOP):</strong></p>
-                        <ul>
-                            <li><strong>Prompt Cơ bản:</strong> Liệt kê định nghĩa khô khan, lý thuyết chung chung.</li>
-                            <li><strong>Prompt Cải tiến:</strong> Phân chia khái niệm và có ví dụ nhưng còn dài dòng.</li>
-                            <li><strong>Prompt Nâng cao (Senior Dev Persona & CoT):</strong> Trình bày sắc bén theo 3 bước tư duy (Khẳng định - Hậu quả lỗi - Code ví dụ). Sát thực tế thiết kế phần mềm, nhấn mạnh bảo trì, code ngắn gọn và đúng bản chất.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;"><a href="reports/Bai3.pdf" class="btn-primary" style="padding: 0.5rem 1rem; width: auto;"><i class="fa-solid fa-file-pdf"></i> Xem báo cáo PDF</a></p>
+                    <div class="project-section">
+                        <h3 class="section-heading">3. Minh chứng học tập</h3>
+                        <p>Báo cáo chi tiết và đầy đủ của Bài tập 2 dưới dạng PDF: <a href="reports/Bai2.pdf" class="pdf-link"><i class="fa-solid fa-file-pdf"></i> Báo cáo Bài 2 (Bai2.pdf)</a></p>
                     </div>
-                </div>
+                </article>
 
-                <!-- Project 4 -->
-                <div class="project-card-wide glass-card fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="project-info">
-                        <span class="badge">Bài tập 4 (Mục 4.4)</span>
-                        <h3>Bài 4: Giao tiếp và hợp tác trong môi trường số — Dự án "Sống Xanh trong Học đường"</h3>
-                        <p><strong>Thiết lập không gian làm việc số:</strong> Trello (Kanban), Google Docs (Suggestion Mode), Google Drive (Cấu trúc 3 cấp), Discord.</p>
+                <!-- PROJECT 3 -->
+                <article class="academic-project fade-in-up">
+                    <div class="project-meta">
+                        <span class="project-category">BÀI THỰC HÀNH 3</span>
+                        <span class="project-reference">Mục 3.4</span>
+                    </div>
+                    <h2 class="project-title">Bài 3: Tổng quan về trí tuệ nhân tạo — Viết Prompt hiệu quả cho các tác vụ học tập</h2>
+                    <hr class="project-divider">
+                    <div class="project-section">
+                        <h3 class="section-heading">1. Mục tiêu & Thực nghiệm</h3>
+                        <p>Tối ưu hóa chất lượng đầu ra của LLM thông qua kỹ thuật Prompt nâng cao, thực nghiệm trên 3 tác vụ học tập khác nhau.</p>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">2. So sánh kết quả thực nghiệm Tác vụ 2 (Giải thích Interface trong OOP)</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Tiêu chí</th>
+                                        <th>Prompt Cơ bản</th>
+                                        <th>Prompt Cải tiến</th>
+                                        <th>Prompt Nâng cao (Senior Dev Persona & CoT)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Định dạng</td>
+                                        <td>Liệt kê định nghĩa lý thuyết khô khan.</td>
+                                        <td>Phân chia khái niệm và có ví dụ.</td>
+                                        <td>Trình bày sắc bén theo 3 bước tư duy (Khẳng định - Hậu quả lỗi - Code ví dụ).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chất lượng</td>
+                                        <td>Lý thuyết chung chung, không rõ ứng dụng.</td>
+                                        <td>Dễ hiểu nhưng giải thích dài dòng.</td>
+                                        <td>Sát thực tế thiết kế phần mềm, nhấn mạnh bảo trì, code ngắn gọn và đúng bản chất.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">3. Hình ảnh phân tích</h3>
+                        <div class="image-gallery" style="grid-template-columns: 1fr;">
+                            <figure class="gallery-item">
+                                <div class="img-placeholder" style="background: #e2e8f0; height: 300px;"><i class="fa-solid fa-wand-magic-sparkles" style="font-size: 3rem; color: #94a3b8;"></i></div>
+                                <figcaption>Hình 3.1: Phân tích giao diện chạy Prompt nâng cao trên Gemini</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">4. Minh chứng học tập</h3>
+                        <p>Báo cáo chi tiết và đầy đủ của Bài tập 3 dưới dạng PDF: <a href="reports/Bai3.pdf" class="pdf-link"><i class="fa-solid fa-file-pdf"></i> Báo cáo Bài 3 (Bai3.pdf)</a></p>
+                    </div>
+                </article>
+
+                <article class="academic-project fade-in-up">
+                    <div class="project-meta">
+                        <span class="project-category">BÀI THỰC HÀNH 4</span>
+                        <span class="project-reference">Mục 4.4</span>
+                    </div>
+                    <h2 class="project-title">Bài 4: Giao tiếp và hợp tác trong môi trường số — Sử dụng công cụ hợp tác trực tuyến</h2>
+                    <hr class="project-divider">
+                    <div class="project-section">
+                        <h3 class="section-heading">1. Dự án nhóm: Sống Xanh trong Học đường</h3>
+                        <p><strong>Thiết lập không gian làm việc số:</strong> Liên kết Trello (Quản lý tác vụ Kanban, Butler automation), Google Docs (Soạn thảo cộng tác, Suggestion Mode), Google Drive (Cấu trúc thư mục 3 cấp, quy định đặt tên tệp chuẩn), và Discord (Server phân kênh thảo luận, voice call họp nhóm).</p>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">2. Bảng phân tích thách thức và giải pháp điều phối nhóm</h3>
                         <div class="table-responsive">
                             <table class="data-table">
                                 <thead>
                                     <tr>
                                         <th>Thách thức</th>
+                                        <th>Mô tả hiện tượng</th>
                                         <th>Giải pháp xử lý thực tế</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>Xung đột dữ liệu Docs</td>
-                                        <td>Bắt buộc sử dụng Suggestion Mode; phục hồi qua Version History.</td>
+                                        <td>Các thành viên gõ đè, xóa nhầm ý tưởng của nhau.</td>
+                                        <td>Bắt buộc sử dụng Suggestion Mode; phục hồi dữ liệu qua Version History.</td>
                                     </tr>
                                     <tr>
                                         <td>Trôi deadline Discord</td>
-                                        <td>Khóa quyền chat kênh #thong-bao-chung; tạo Thread chủ đề; ghim tin.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lệch kỹ năng công nghệ</td>
-                                        <td>Biên soạn tài liệu hướng dẫn nhanh; hướng dẫn qua chia sẻ màn hình.</td>
+                                        <td>Tin nhắn quan trọng bị chìm giữa các cuộc thảo luận phiếm.</td>
+                                        <td>Khóa quyền chat kênh #thong-bao-chung; tạo Thread chủ đề; ghim tin nhắn.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p style="margin-top: 1rem;"><a href="reports/Bai4.pdf" class="btn-primary" style="padding: 0.5rem 1rem; width: auto;"><i class="fa-solid fa-file-pdf"></i> Xem báo cáo PDF</a></p>
                     </div>
-                </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">3. Minh chứng học tập</h3>
+                        <p>Báo cáo chi tiết: <a href="reports/Bai4.pdf" class="pdf-link"><i class="fa-solid fa-file-pdf"></i> Báo cáo Bài 4 (Bai4.pdf)</a></p>
+                    </div>
+                </article>
 
-                <!-- Project 5 -->
-                <div class="project-card-wide glass-card fade-in-up" style="animation-delay: 0.4s;">
-                    <div class="project-info">
-                        <span class="badge">Bài tập 5 (Mục 5.4)</span>
-                        <h3>Bài 5: Sáng tạo nội dung số — Tác động của AI đến Giáo dục đại học</h3>
-                        <p><strong>Quy trình tích hợp AI (AI ~40%, Con người ~60%):</strong></p>
-                        <ul>
-                            <li><strong>Google Gemini:</strong> Brainstorm và lập dàn ý. Con người: Cắt 50% câu thừa, viết lại giọng văn sinh viên, đưa số liệu thực tế VN.</li>
-                            <li><strong>DALL-E 3:</strong> Tạo hình ảnh Thumbnail độc bản. Con người: Chỉnh sửa ánh sáng, cắt tỷ lệ web.</li>
-                            <li><strong>Canva AI:</strong> Thiết kế bố cục Infographic thô. Con người: Can thiệp 1h đổi bảng màu, căn lề, thay icon đúng ngữ cảnh.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;"><a href="reports/Bai5.pdf" class="btn-primary" style="padding: 0.5rem 1rem; width: auto;"><i class="fa-solid fa-file-pdf"></i> Xem báo cáo PDF</a></p>
+                <article class="academic-project fade-in-up">
+                    <div class="project-meta">
+                        <span class="project-category">BÀI THỰC HÀNH 5</span>
+                        <span class="project-reference">Mục 5.4</span>
                     </div>
-                </div>
+                    <h2 class="project-title">Bài 5: Sáng tạo nội dung số — Sử dụng AI tạo sinh để hỗ trợ sáng tạo</h2>
+                    <hr class="project-divider">
+                    <div class="project-section">
+                        <h3 class="section-heading">1. Sản phẩm & Quy trình</h3>
+                        <p><strong>Sản phẩm:</strong> Bài viết Blog học thuật kết hợp Infographic tóm tắt nội dung về chủ đề "Tác động của AI đến Giáo dục đại học".</p>
+                        <p><strong>Quy trình tích hợp AI (Tỷ lệ đóng góp AI ~40%, Con người ~60%):</strong> Sử dụng Gemini để brainstorm và lập dàn ý; dùng DALL-E 3 tạo hình ảnh Thumbnail độc bản; dùng Canva AI để thiết kế bố cục Infographic thô. Quá trình can thiệp của tôi bao gồm viết lại 60% văn bản để bổ sung số liệu thực tế tại Việt Nam, chỉnh sửa ánh sáng/cắt cúp hình ảnh, và thiết kế thủ công lại 60% Infographic trên Canva.</p>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">2. Bảng phân tích và so sánh các công cụ AI</h3>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Công cụ AI</th>
+                                        <th>Điểm mạnh</th>
+                                        <th>Phần việc của con người</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Google Gemini</td>
+                                        <td>Tốc độ outline nhanh, gợi ý lập luận logic.</td>
+                                        <td>Cắt 50% câu thừa, viết lại bằng giọng văn sinh viên, đưa số liệu thực tế VN.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DALL-E 3</td>
+                                        <td>Hiểu ngôn ngữ tự nhiên tốt, ảnh nét độc bản.</td>
+                                        <td>Chỉnh sửa ánh sáng, tương phản 15% trong Lightroom; cắt tỷ lệ web.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Canva AI</td>
+                                        <td>Tạo layout thô nhanh chóng từ văn bản.</td>
+                                        <td>Can thiệp 1h: đổi bảng màu Navy-Cát, căn lề, thay icon đúng ngữ cảnh.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">3. Minh chứng học tập</h3>
+                        <p>Báo cáo chi tiết: <a href="reports/Bai5.pdf" class="pdf-link"><i class="fa-solid fa-file-pdf"></i> Báo cáo Bài 5 (Bai5.pdf)</a></p>
+                    </div>
+                </article>
 
-                <!-- Project 6 -->
-                <div class="project-card-wide glass-card fade-in-up" style="animation-delay: 0.5s;">
-                    <div class="project-info">
-                        <span class="badge">Bài tập 6 (Mục 6.4)</span>
-                        <h3>Bài 6: An toàn và liêm chính học thuật trong môi trường số</h3>
-                        <p><strong>Bộ nguyên tắc cá nhân "Sử dụng AI có trách nhiệm":</strong></p>
-                        <ul>
-                            <li><strong>Quy tắc 80/20:</strong> AI đảm nhận tối đa 20% khối lượng công việc; 80% phân tích cốt lõi từ cá nhân.</li>
-                            <li><strong>Không Copy-Paste:</strong> Tuyệt đối không sao chép nguyên văn.</li>
-                            <li><strong>Xác thực tuyệt đối (Zero Trust):</strong> Kiểm chứng nguồn gốc tài liệu chính thống.</li>
-                            <li><strong>Minh bạch tuyệt đối:</strong> Luôn khai báo rõ ràng công cụ AI đã tham gia ở công đoạn nào.</li>
-                            <li><strong>Bảo vệ dữ liệu:</strong> Không tải lên AI các dữ liệu chưa công bố hoặc thông tin cá nhân.</li>
-                            <li><strong>Ưu tiên hỏi ngược:</strong> Sử dụng prompt yêu cầu AI đặt câu hỏi gợi mở để tự giải quyết vấn đề.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;"><a href="reports/Bai6.pdf" class="btn-primary" style="padding: 0.5rem 1rem; width: auto;"><i class="fa-solid fa-file-pdf"></i> Xem báo cáo PDF</a></p>
+                <article class="academic-project fade-in-up">
+                    <div class="project-meta">
+                        <span class="project-category">BÀI THỰC HÀNH 6</span>
+                        <span class="project-reference">Mục 6.4</span>
                     </div>
-                </div>
+                    <h2 class="project-title">Bài 6: An toàn và liêm chính học thuật trong môi trường số</h2>
+                    <hr class="project-divider">
+                    <div class="project-section">
+                        <h3 class="section-heading">1. Bộ nguyên tắc cá nhân "Sử dụng AI có trách nhiệm"</h3>
+                        <ul class="custom-list">
+                            <li><strong>Quy tắc 80/20:</strong> AI đảm nhận tối đa 20% khối lượng công việc (brainstorm); 80% phân tích cốt lõi phải từ chất xám cá nhân.</li>
+                            <li><strong>Không Copy-Paste:</strong> Tuyệt đối không sao chép nguyên văn. Mọi ý tưởng phải được viết lại bằng văn phong riêng.</li>
+                            <li><strong>Xác thực tuyệt đối (Zero Trust):</strong> Coi mọi dẫn chứng AI đưa ra là tin đồn. Bắt buộc kiểm chứng nguồn gốc tài liệu chính thống.</li>
+                            <li><strong>Minh bạch tuyệt đối:</strong> Luôn khai báo rõ ràng công cụ AI đã tham gia ở công đoạn nào trong báo cáo.</li>
+                            <li><strong>Bảo vệ dữ liệu:</strong> Không tải lên AI các dữ liệu chưa công bố của trường hoặc thông tin cá nhân.</li>
+                            <li><strong>Ưu tiên hỏi ngược:</strong> Sử dụng các prompt yêu cầu AI đặt câu hỏi gợi mở để bản thân tự giải quyết vấn đề.</li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h3 class="section-heading">2. Minh chứng học tập</h3>
+                        <p>Báo cáo chi tiết: <a href="reports/Bai6.pdf" class="pdf-link"><i class="fa-solid fa-file-pdf"></i> Báo cáo Bài 6 (Bai6.pdf)</a></p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Section Tổng kết -->
+        <!-- SUMMARY SECTION -->
         <section id="summary" class="section">
-            <div class="summary-container">
-                <div class="section-header fade-in">
-                    <h2>Tổng Kết & Định Hướng Tương Lai</h2>
-                    <p>Hành trình học tập môn Kỹ năng số mang lại những chuyển biến lớn trong nhận thức. Công nghệ chỉ là công cụ bổ trợ; tính kỷ luật, tư duy hệ thống và tinh thần trách nhiệm mới là yếu tố quyết định.</p>
+            <div class="section-header fade-in">
+                <h2 class="project-title" style="text-align: center;">Tổng Kết & Định Hướng Tương Lai</h2>
+                <p style="text-align: center; color: var(--text-secondary);">Hành trình học tập môn Kỹ năng số mang lại những chuyển biến lớn trong nhận thức. Công nghệ chỉ là công cụ bổ trợ; tính kỷ luật, tư duy hệ thống và tinh thần trách nhiệm mới là yếu tố quyết định.</p>
+            </div>
+
+            <div class="summary-content">
+                <div class="academic-project fade-in-up" style="padding: 2rem; border: 1px solid var(--border-light); border-radius: 8px;">
+                    <h3 class="section-heading">01. Khai thác thông tin & Tư duy phản biện</h3>
+                    <p>Kỹ năng tra cứu nâng cao với các toán tử để tiếp cận nguồn học thuật chính thống; áp dụng quy trình đánh giá 5 tiêu chí nghiêm ngặt để chọn lọc tài liệu có độ tin cậy cao.</p>
                 </div>
 
-                <div class="summary-content">
-                    <div class="summary-item glass-card fade-in-up">
-                        <div class="icon-box"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <div class="text-content">
-                            <h3>01. Khai thác thông tin & Tư duy phản biện</h3>
-                            <p>Kỹ năng tra cứu nâng cao với các toán tử để tiếp cận nguồn học thuật chính thống; áp dụng quy trình đánh giá 5 tiêu chí nghiêm ngặt để chọn lọc tài liệu có độ tin cậy cao.</p>
-                        </div>
-                    </div>
+                <div class="academic-project fade-in-up" style="padding: 2rem; border: 1px solid var(--border-light); border-radius: 8px;">
+                    <h3 class="section-heading">02. Làm chủ Prompt Engineering & AI liêm chính</h3>
+                    <p>Kỹ năng viết prompt nâng cao (Persona, Constraints, CoT) và áp dụng bộ nguyên tắc trách nhiệm (quy tắc 80/20, Zero-trust fact-check, trích dẫn APA 7th).</p>
+                </div>
 
-                    <div class="summary-item glass-card fade-in-up" style="animation-delay: 0.1s;">
-                        <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
-                        <div class="text-content">
-                            <h3>02. Làm chủ Prompt Engineering & AI</h3>
-                            <p>Kỹ năng viết prompt nâng cao (Persona, Constraints, CoT) và áp dụng bộ nguyên tắc trách nhiệm (quy tắc 80/20, Zero-trust fact-check, trích dẫn APA 7th).</p>
-                        </div>
-                    </div>
+                <div class="academic-project fade-in-up" style="padding: 2rem; border: 1px solid var(--border-light); border-radius: 8px;">
+                    <h3 class="section-heading">03. Cộng tác trực tuyến & Quản lý hạ tầng số</h3>
+                    <p>Sử dụng thành thạo Trello Kanban, Google Docs Suggestion Mode, cấu trúc lưu trữ Google Drive khoa học, và Discord phân kênh điều phối dự án hiệu quả.</p>
+                </div>
 
-                    <div class="summary-item glass-card fade-in-up" style="animation-delay: 0.2s;">
-                        <div class="icon-box"><i class="fa-solid fa-users"></i></div>
-                        <div class="text-content">
-                            <h3>03. Cộng tác & Quản lý hạ tầng số</h3>
-                            <p>Sử dụng thành thạo Trello Kanban, Google Docs Suggestion Mode, cấu trúc lưu trữ Google Drive khoa học, và Discord phân kênh điều phối dự án hiệu quả.</p>
-                        </div>
-                    </div>
-
-                    <div class="summary-item glass-card fade-in-up" style="animation-delay: 0.3s;">
-                        <div class="icon-box"><i class="fa-solid fa-compass"></i></div>
-                        <div class="text-content">
-                            <h3>Định hướng Học tập tại UET</h3>
-                            <p>Áp dụng Git/GitHub, cấu trúc thư mục code vào đồ án lập trình. Cam kết đạo đức học thuật, khai báo minh bạch sự hỗ trợ của AI, thiết lập nền móng kỹ sư chuyên nghiệp.</p>
-                        </div>
-                    </div>
+                <div class="academic-project fade-in-up" style="padding: 2rem; border: 1px solid var(--border-light); border-radius: 8px; grid-column: 1 / -1;">
+                    <h3 class="section-heading">Định hướng Học tập tại UET</h3>
+                    <p>Áp dụng kỹ năng số vào chuyên ngành Công nghệ Thông tin. Tôi sẽ tiếp tục áp dụng các công cụ quản lý phiên bản Git/GitHub, cấu trúc thư mục code khoa học để thực hiện đồ án môn học chuyên ngành lập trình. Đồng thời, tôi cam kết giữ vững đạo đức học thuật, liêm chính số, thành thật khai báo sự hỗ trợ của các công cụ AI (như GitHub Copilot, ChatGPT) trong các báo cáo đồ án, thiết lập nền móng vững chắc cho tác phong kỹ sư chuyên nghiệp trong tương lai.</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="current-year"></span> Portfolio của <span class="highlight">Nguyễn Hòa Bình</span>. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Nguyễn Hòa Bình. Bài tập Kỹ năng số UET.</p>
     </footer>
 
     <script src="script.js"></script>
