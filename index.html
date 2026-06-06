@@ -260,5 +260,25 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Firebase Analytics Configuration -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB7dwqmNjp5ta3CWKn0ES9_bEjWuI1ynDE",
+        authDomain: "porf-84d1f.firebaseapp.com",
+        projectId: "porf-84d1f",
+        storageBucket: "porf-84d1f.firebasestorage.app",
+        messagingSenderId: "611991069821",
+        appId: "1:611991069821:web:bf29775f9a119380243d14",
+        measurementId: "G-5PQ7901WRV"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      console.log("Firebase Analytics initialized!");
+    </script>
 </body>
 </html>
