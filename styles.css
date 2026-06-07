@@ -89,8 +89,9 @@ body {
 
 .smart-card p { margin-bottom: 1rem; color: #334155; }
 
-.custom-list { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #334155; }
-.custom-list li { margin-bottom: 0.75rem; padding-left: 0.5rem; }
+.custom-list { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #334155; list-style-type: none; padding-left: 0; }
+.custom-list li { margin-bottom: 0.75rem; position: relative; padding-left: 1.2rem; }
+.custom-list li::before { content: "-"; position: absolute; left: 0; color: #334155; font-weight: bold; }
 .custom-list ul { margin-top: 0.5rem; margin-left: 1.5rem; }
 
 code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 6px; font-size: 0.9em; font-family: 'Consolas', monospace; color: #0f172a; border: 1px solid #e2e8f0; }
