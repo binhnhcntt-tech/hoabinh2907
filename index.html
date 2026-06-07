@@ -186,75 +186,64 @@
             <section id="project-3" class="section">
                 <div class="smart-card">
                     <span class="pill">BÀI THỰC HÀNH 3 • Mục 3.4</span>
-                    <h2 class="page-title">Tổng quan về trí tuệ nhân tạo</h2>
-                    <p class="page-desc">Viết Prompt hiệu quả cho các tác vụ học tập trên LLMs.</p>
+                    <h2 class="page-title">Tổng quan về Trí tuệ nhân tạo (AI)</h2>
+                    <p class="page-desc">Thực hành nghệ thuật Prompt Engineering để tối ưu hóa hiệu suất làm việc với Large Language Models (LLMs).</p>
 
-                    <h3 class="section-heading">1. Mục tiêu & Thực nghiệm</h3>
-                    <p>Tối ưu hóa chất lượng đầu ra của LLM thông qua kỹ thuật Prompt nâng cao (Persona, Constraints, Chain of Thought), thực nghiệm trên các tác vụ học tập khác nhau.</p>
+                    <h3 class="section-heading">1. Các tác vụ thực nghiệm</h3>
+                    <p>Trong bài thực hành này, tôi tiến hành so sánh kết quả sinh văn bản của AI (Gemini) dựa trên 3 cấp độ Prompt (Cơ bản, Cải tiến, Nâng cao) thông qua 3 tác vụ điển hình:</p>
+                    <ul class="custom-list">
+                        <li><strong>Tác vụ 1:</strong> Tóm tắt tài liệu (Tóm tắt văn bản miêu tả "cây bàng").</li>
+                        <li><strong>Tác vụ 2:</strong> Giải thích khái niệm phức tạp (Giải thích "Đạo hàm" cho người mới học Toán).</li>
+                        <li><strong>Tác vụ 3:</strong> Tạo câu hỏi ôn tập (Thiết kế bộ câu hỏi trắc nghiệm lập trình Python).</li>
+                    </ul>
 
-                    <h3 class="section-heading">2. So sánh kết quả Tác vụ 1: Tóm tắt bài báo KH</h3>
+                    <h3 class="section-heading">2. Phân tích & So sánh cấp độ Prompt</h3>
                     <div class="table-responsive">
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>Tiêu chí</th>
-                                    <th>Prompt Cơ bản</th>
-                                    <th>Prompt Cải tiến</th>
-                                    <th>Prompt Nâng cao (Persona)</th>
+                                    <th>Cấp độ Prompt</th>
+                                    <th>Đặc điểm & Cấu trúc</th>
+                                    <th>Chất lượng đầu ra (Output)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Định dạng</strong></td>
-                                    <td>Khối văn bản dài dòng, đặc chữ.</td>
-                                    <td>Đoạn văn ngắn gọn hơn.</td>
-                                    <td>Định dạng đúng 3 mục: Vấn đề, Phương pháp, Kết quả.</td>
+                                    <td><strong>Prompt cơ bản</strong><br><small>VD: "Tóm tắt đoạn văn sau"</small></td>
+                                    <td>Quá chung chung, không có hướng dẫn cụ thể, không quy định định dạng.</td>
+                                    <td>Trả lời quá ngắn gọn, lộn xộn, dễ lệch yêu cầu, tính nhất quán thấp.</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Chất lượng</strong></td>
-                                    <td>Còn lan man, giữ nhiều từ ngữ thừa.</td>
-                                    <td>Lọc được ý chính nhưng chưa cô đọng.</td>
-                                    <td>Trích xuất chính xác các con số (+15% điểm thi), bỏ từ thừa.</td>
+                                    <td><strong>Prompt cải tiến</strong><br><small>VD: "Hãy tóm tắt thành 5-7 câu, làm nổi bật ý chính..."</small></td>
+                                    <td>Có yêu cầu đơn giản, ràng buộc được độ dài và format cơ bản.</td>
+                                    <td>Ổn định hơn, khá đầy đủ ý, phù hợp cho nhu cầu thao tác nhanh.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prompt nâng cao</strong><br><small>VD: "Bạn là giảng viên... Hãy tóm tắt theo cấu trúc 4 phần..."</small></td>
+                                    <td>Sử dụng Role Prompting, cấu trúc đa lớp rõ ràng (bullet points), ràng buộc đối tượng mục tiêu.</td>
+                                    <td>Cực kỳ logic, đầy đủ chi tiết, chất lượng cao, kiểm soát AI rất tốt.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <h3 class="section-heading">3. So sánh kết quả Tác vụ 2: Giải thích Interface OOP</h3>
-                    <div class="table-responsive">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Tiêu chí</th>
-                                    <th>Prompt Cơ bản</th>
-                                    <th>Prompt Cải tiến</th>
-                                    <th>Prompt Nâng cao (Senior Dev & CoT)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Định dạng</strong></td>
-                                    <td>Liệt kê định nghĩa lý thuyết khô khan.</td>
-                                    <td>Phân chia khái niệm và có ví dụ.</td>
-                                    <td>Trình bày sắc bén theo 3 bước tư duy.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Chất lượng</strong></td>
-                                    <td>Lý thuyết chung chung.</td>
-                                    <td>Dễ hiểu nhưng giải thích dài dòng.</td>
-                                    <td>Sát thực tế thiết kế phần mềm, code ngắn gọn và đúng bản chất.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h3 class="section-heading">3. Nguyên tắc viết Prompt hiệu quả</h3>
+                    <div class="dash-grid" style="margin-bottom: 2.5rem;">
+                        <div class="dash-card">
+                            <h4 style="color:var(--primary); font-size: 1.1rem;"><i class="fa-solid fa-crosshairs"></i> 1. Rõ ràng mục tiêu</h4>
+                            <p>Sử dụng các động từ hành động dứt khoát như “tóm tắt”, “giải thích”, “tạo câu hỏi” để định hướng nội dung chính xác.</p>
+                        </div>
+                        <div class="dash-card">
+                            <h4 style="color:var(--primary); font-size: 1.1rem;"><i class="fa-solid fa-list-check"></i> 2. Thêm ràng buộc</h4>
+                            <p>Quy định chặt chẽ về số lượng (số câu, độ dài) và định dạng đầu ra (danh sách bullet, cấu trúc step-by-step).</p>
+                        </div>
+                        <div class="dash-card">
+                            <h4 style="color:var(--primary); font-size: 1.1rem;"><i class="fa-solid fa-user-tie"></i> 3. Gán vai trò (Role)</h4>
+                            <p>Cung cấp ngữ cảnh chuyên môn cho AI ("Bạn là giảng viên", "Bạn là kỹ sư") để đảm bảo văn phong và độ chuyên sâu phù hợp.</p>
+                        </div>
                     </div>
 
-                    <h3 class="section-heading">4. Hình ảnh phân tích</h3>
-                    <div class="dash-card" style="text-align: center; max-width: 600px;">
-                        <div class="dash-icon" style="margin: 0 auto 1rem auto;"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                        <p style="font-style: italic;">Hình 3.1: Phân tích giao diện chạy Prompt nâng cao trên Gemini</p>
-                    </div>
-
-                    <h3 class="section-heading">5. Minh chứng học tập</h3>
+                    <h3 class="section-heading">4. Minh chứng học tập</h3>
                     <a href="reports/Bai3.pdf" target="_blank" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Xem Báo cáo Bài 3 (Bai3.pdf)</a>
                 </div>
             </section>
